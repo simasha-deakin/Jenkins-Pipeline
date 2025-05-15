@@ -7,12 +7,13 @@ pipeline {
                 echo 'Building...'
             }
         }
-        post{
-            success{
-                mail to: 'simashakavindi@gmail.com',
-                subject: 'Build Status Email',
-                body: 'Build was successful'
-            }
+    }
+
+    post {
+        success {
+            mail to: 'simashakavindi@gmail.com',
+                 subject: 'Build Status Email',
+                 body: 'Build was successful'
         }
     }
 }
