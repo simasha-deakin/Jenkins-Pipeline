@@ -7,6 +7,24 @@ pipeline {
                 echo 'Building...'
             }
         }
+
+        stage('Test') {
+            steps {
+                echo 'Testing...'
+            }
+        }
+
+        stage('Deploy') {
+            steps {
+                echo 'Deploying...'
+            }
+        }
+
+        stage('Complete') {
+            steps {
+                echo 'Completed...'
+            }
+        }
     }
 
     post {
@@ -16,19 +34,4 @@ pipeline {
                  body: 'Build was successful'
         }
     }
-    stage('Test') {
-            steps {
-                echo 'Testing...'
-            }
-        }
-    stage('Deploy') {
-            steps {
-                echo 'Deploying...'
-            }
-        }
-    stage('Complete') {
-            steps {
-                echo 'Completed...'
-            }
-        }
 }
